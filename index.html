@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Map</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .map-container {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .map {
+            border: 1px solid #ccc;
+            padding: 20px;
+            position: relative;
+            width: 500px;
+            height: 400px;
+        }
+        .control-panel {
+            margin-bottom: 20px;
+        }
+        .control-panel label, .control-panel select, .control-panel button {
+            margin-right: 10px;
+        }
+        .section {
+            position: absolute;
+            padding: 5px;
+            background-color: lightblue;
+            border: 1px solid #000;
+            border-radius: 5px;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+        .path {
+            stroke-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="control-panel">
+        <label for="start">Start Section:</label>
+        <select id="start">
+            <option>Produce</option>
+            <option>Meat</option>
+            <option>Frozen Foods</option>
+            <option>Bakery</option>
+            <option>Canned Goods</option>
+            <option>Dry Goods</option>
+            <option>Health & Beauty</option>
+            <option>Electronics</option>
+            <option>Household</option>
+            <option>Clothing</option>
+            <option>Checkout</option>
+        </select>
+
+        <label for="goal">Goal Section:</label>
+        <select id="goal">
+            <option>Produce</option>
+            <option>Meat</option>
+            <option>Frozen Foods</option>
+            <option>Bakery</option>
+            <option>Canned Goods</option>
+            <option>Dry Goods</option>
+            <option>Health & Beauty</option>
+            <option>Electronics</option>
+            <option>Household</option>
+            <option>Clothing</option>
+            <option>Checkout</option>
+        </select>
+
+        <button id="find-route">Find Route</button>
+    </div>
+    <div class="map-container">
+        <div class="map" id="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
